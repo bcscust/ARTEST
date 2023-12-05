@@ -1,0 +1,11 @@
+Model Information:
+* title:	SCI-FI SuperSoldier - Game-ready [ANIMATED]
+* source:	https://sketchfab.com/3d-models/sci-fi-supersoldier-game-ready-animated-09e0bd9c9715463584cd847d9b30a140
+* author:	Sihgames (https://sketchfab.com/sihagames)
+
+Model License:
+* license type:	CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
+* requirements:	Author must be credited. Commercial use is allowed.
+
+If you use this 3D model in your project be sure to copy paste this credit wherever you share it:
+This work is based on "SCI-FI SuperSoldier - Game-ready [ANIMATED]" (https://sketchfab.com/3d-models/sci-fi-supersoldier-game-ready-animated-09e0bd9c9715463584cd847d9b30a140) by Sihgames (https://sketchfab.com/sihagames) licensed under CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
