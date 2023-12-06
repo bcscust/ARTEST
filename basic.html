@@ -10,11 +10,11 @@
   <a-scene embedded arjs="detectionMode: mono_and_matrix; matrixCodeType: 3x3; sourceType: webcam; patternRatio: 0.5;">
     
     <!-- Horizontal surface detection -->
-    <a-plane position="0 0 0" rotation="-90 0 0" width="10" height="10" color="blue" material="opacity: 0.5;"></a-plane>
+    <a-plane position="0 0 0" rotation="-90 0 0" width="10" height="10" color="white" material="opacity: 0.5;"></a-plane>
     
     <!-- Display "Hello" on the detected horizontal plane -->
     <a-entity
-      text="value: Hello; align: center; width: 4; color: white;"
+      text="value: Hello; align: center; width: 4; color: red;"
       position="0 0.1 0"  <!-- Adjust the height above the plane as needed -->
       rotation="-90 0 0">
     </a-entity>
