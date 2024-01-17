@@ -57,6 +57,10 @@
             transition: transform 0.3s; /* Add smooth scaling transition */
             transition: transform 0.3s ease-in-out, background-color 0.3s ease-in-out; /* Animations for button scale and background color */
         }
+        .black-button {
+            background-color: rgb(10, 9, 9);
+            animation-name: black-slide;
+        }
 
         .pink-button {
             background-color: pink;
@@ -73,6 +77,10 @@
             animation-name: white-slide;
         }
         /* CSS animations for button slide */
+        @keyframes black-slide {
+            0% { transform: translateX(-100%); }
+            100% { transform: translateX(0); }
+        }
         @keyframes pink-slide {
             0% { transform: translateX(-100%); }
             100% { transform: translateX(0); }
@@ -103,6 +111,7 @@
         <button class="color-button pink-button" onclick="changeCarColor('pink')">Pink</button>
         <button class="color-button green-button" onclick="changeCarColor('mintgreen')">Mint Green</button> <!-- Changed class and text -->
         <button class="color-button white-button" onclick="changeCarColor('white')">White</button>
+        <button class="color-button black-button" onclick="changeCarColor('black')">Black</button>
     </div>
 
     <!-- Content -->
@@ -139,6 +148,10 @@
             }
 		if (color === 'pink') {
                 window.location.href = 'miniev-high/fourth.html';
+                return; // Add this line to prevent further execution
+            }
+                if(color === 'black') {
+                window.location.href = 'miniev-high/first.html';
                 return; // Add this line to prevent further execution
             }
 
