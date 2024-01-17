@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Background Video without Loading Screen</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            overflow: hidden; /* Prevent scroll bars */
+        }
+
+        video {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            z-index: -1; /* Place the video behind other content */
+        }
+
+        .content-text {
+            text-align: center;
+            color: #fff;
+            padding: 20px;
+        }
+
+        /* Button container styles */
+        .button-container {
+            position: fixed;
+            top: 50%; /* Vertically centered */
+            left: 50%; /* Horizontally centered */
+            transform: translate(-50%, -50%); /* Center both horizontally and vertically */
+            display: flex;
+            flex-direction: row; /* Change to row for horizontal alignment */
+            align-items: center;
+        }
+
+        .choose-color-label {
+            color: #fff;
+            font-size: 18px;
+            font-weight: bold; /* Make it bold */
+            margin-right: 10px; /* Add spacing to the right of the label */
+        }
+
+        .color-button {
+            background-color: transparent;
+            border: 2px solid #fff;
+            border-radius: 20px;
+            color: #fff;
+            cursor: pointer;
+            font-size: 18px;
+            padding: 5px 15px;
+            margin-right: 10px; /* Adjust spacing to the right of the buttons */
+            width: 200px; /* Set a fixed width for buttons */
+            animation: button-slide 1s ease-in-out forwards; /* Animation for button slide */
+            transition: transform 0.3s; /* Add smooth scaling transition */
+            transition: transform 0.3s ease-in-out, background-color 0.3s ease-in-out; /* Animations for button scale and background color */
+        }
+
+        .pink-button {
+            background-color: pink;
+            animation-name: pink-slide;
+        }
+
+        .green-button { /* Changed class to green-button */
+            background-color: #99edc3; /* Mint green color */
+            animation-name: green-slide; /* Changed animation name */
+        }
+
+        .white-button {
+            background-color: lightgrey;
+            animation-name: white-slide;
+        }
+        /* CSS animations for button slide */
+        @keyframes pink-slide {
+            0% { transform: translateX(-100%); }
+            100% { transform: translateX(0); }
+        }
+
+        @keyframes green-slide { /* Added animation for mint green */
+            0% { transform: translateX(-100%); }
+            100% { transform: translateX(0); }
+        }
+
+        @keyframes white-slide {
+            0% { transform: translateX(100%); }
+            100% { transform: translateX(0); }
+        }
+
+        .color-button:hover {
+            transform: scale(1.1); /* Scale up on hover */
+        }
+
+        .color-button:active {
+            background-color: #333; /* Change button color on click */
+        }
+    </style>
+</head>
+<body>
+    <!-- Button container -->
+    <div class="button-container">
+        <button class="color-button pink-button" onclick="changeCarColor('pink')">Pink</button>
+        <button class="color-button green-button" onclick="changeCarColor('mintgreen')">Mint Green</button> <!-- Changed class and text -->
+        <button class="color-button white-button" onclick="changeCarColor('white')">White</button>
+    </div>
+
+    <!-- Content -->
+    <video autoplay loop muted>
+        <source src="miniEV.mp4" type="video/mp4">
+    </video>
+    <div class="content-text">
+    </div>
+
+    <script>
+        // Function to add a CSS class when a button is clicked
+        function clickButton(button) {
+            button.classList.add("button-clicked");
+            setTimeout(function () {
+                button.classList.remove("button-clicked");
+            }, 200); // Remove the class after 200ms (0.2 seconds)
+        }
+
+        // Handle button clicks and color changes
+        function changeCarColor(color) {
+            // Get the clicked button element
+            var clickedButton = event.target;
+
+            // Apply the click effect
+            clickButton(clickedButton);
+
+            if (color === 'white') {
+                window.location.href = 'second.html';
+                return; // Add this line to prevent further execution
+            }
+	     if (color === 'mintgreen') {
+                window.location.href = 'third.html';
+                return; // Add this line to prevent further execution
+            }
+		if (color === 'pink') {
+                window.location.href = 'fourth.html';
+                return; // Add this line to prevent further execution
+            }
+
+
+            // Add your color-changing logic here
+        }
+    </script>
+</body>
+</html>
